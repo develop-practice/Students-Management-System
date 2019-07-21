@@ -1,0 +1,1 @@
+CREATE TABLE sample_db.students (school_year INT, school_class INT, attendance_number INT, name VARCHAR(255), PRIMARY KEY (school_year, school_class, attendance_number));

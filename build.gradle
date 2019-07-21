@@ -20,7 +20,6 @@ configurations {
 subprojects {
     apply plugin: 'java'
     apply plugin: 'io.spring.dependency-management'
-
     group = 'practice.develop'
     version = '1.0.0-SNAPSHOT'
     sourceCompatibility = '1.8'

@@ -1,4 +1,5 @@
-rootProject.name = 'post-client'
+rootProject.name = 'DB-Operation'
 
-include 'blank-rest-app'
+include 'rest-client-app'
+include 'rest-server-app'
 enableFeaturePreview('STABLE_PUBLISHING')
