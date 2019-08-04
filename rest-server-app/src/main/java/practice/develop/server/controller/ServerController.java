@@ -15,8 +15,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import practice.develop.server.model.dto.SampleRequestBody;
-import practice.develop.server.model.dto.SampleResponseBody;
+import practice.develop.server.model.dto.InsertRequestBody;
+import practice.develop.server.model.dto.InsertResponseBody;
+import practice.develop.server.model.dto.SelectRequestBody;
+import practice.develop.server.model.dto.SelectResponseBody;
 
 @RestController
 @Validated
@@ -25,11 +27,19 @@ public class ServerController {
 	@Autowired
 	private ServiceHelper helper;
 
-	@RequestMapping(value = "/post-server", method = RequestMethod.POST)
+	@RequestMapping(value = "/insert", method = RequestMethod.POST)
 	@ResponseStatus(HttpStatus.OK)
 	@ResponseBody
-	public SampleResponseBody post(@RequestBody @Valid SampleRequestBody requestBody) {
+	public InsertResponseBody insert(@RequestBody @Valid InsertRequestBody requestBody) {
 
 		return helper.insert(requestBody);
+	}
+	
+	@RequestMapping(value = "/select", method = RequestMethod.POST)
+	@ResponseStatus(HttpStatus.OK)
+	@ResponseBody
+	public SelectResponseBody select(@RequestBody @Valid SelectRequestBody requestBody) {
+
+		return helper.select(requestBody);
 	}
 }

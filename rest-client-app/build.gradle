@@ -5,3 +5,9 @@ dependencies {
     compileOnly 'org.projectlombok:lombok'
     testCompile 'org.springframework.boot:spring-boot-starter-test'
 }
+
+bootRun {
+    if (project.hasProperty('operationKind')) {
+        args project.operationKind
+    }
+}

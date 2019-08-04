@@ -1,4 +1,4 @@
-rootProject.name = 'DB-Operation'
+rootProject.name = 'Students-Management-System'
 
 include 'rest-client-app'
 include 'rest-server-app'
